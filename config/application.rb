@@ -30,6 +30,8 @@ module Backend
     config.api_only = true
 
     config.middleware.use ActionDispatch::Cookies
+    config.action_dispatch.cookies_same_site_protection = :none
+    config.action_dispatch.cookies_secure = false
 
     config.secret_key_base = "5we3EI20KLJgz2veChc4x49rN0OjWbPJUGAsw10S76kKhn8fw9QvaMbh0tw2T63uyBD9ktWfWkm"
   end
