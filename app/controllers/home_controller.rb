@@ -6,4 +6,10 @@ class HomeController < ApplicationController
       message: cookies[:message]
     }
   end
+
+  def show
+    render json: {
+      header: request.headers["header"]
+    }
+  end
 end
